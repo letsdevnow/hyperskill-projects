@@ -95,7 +95,6 @@ public class Main {
 	public static BullsCowsGrade Grader(String guessStr, String secretCode) {
 		int cows = 0;
 		int bulls = 0;
-
 		for (int i = 0; i < guessStr.length(); i++) {
 			for (int j = 0; j < secretCode.length(); j++) {
 				if (guessStr.charAt(i) == secretCode.charAt(j) && i != j) {
@@ -105,9 +104,7 @@ public class Main {
 				}
 			}
 		}
-
-		BullsCowsGrade bcGrade = new BullsCowsGrade(bulls, cows);
-		return bcGrade;
+		return new BullsCowsGrade(bulls, cows);
 	}
 }
 
@@ -124,5 +121,4 @@ class BullsCowsGrade {
 		this.bulls = bulls;
 		this.cows = cows;
 	}
-
 }
